@@ -1,4 +1,15 @@
+<script setup>
+const { path } = useRoute()
+const { data } = await useAsyncData(`content-${path}`, () => {
+  return queryContent().where({ _path: path }).findOne()
+})
+</script>
+
 <template>
+  <main>
+    <ContentRenderer v-if="data" :value="data" />
+  </main>
+
   <div class="max-w-2xl px-4 py-10 m-auto bg-white sm:px-8 sm:shadow dark:bg-gray-800 sm:rounded">
     <!-- Fetch and display the Markdown document from current path -->
     <ContentDoc class="prose prose-gray dark:prose-invert max-w-none">
