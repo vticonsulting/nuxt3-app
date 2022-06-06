@@ -7,8 +7,9 @@
       <Meta property="og:image" content="/cover.jpg" />
       <Meta name="twitter:card" content="summary_large_image" />
       <Navbar />
+      <ConfettiComponent :passed="true" />
       <NuxtPage />
-    <!-- </PageContainer> -->
+      <!-- </PageContainer> -->
     </AppContainer>
   </div>
 </template>

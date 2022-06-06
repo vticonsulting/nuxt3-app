@@ -46,11 +46,26 @@ export default defineNuxtConfig({
       fields: ['navTitle'],
     },
   },
-  // css: ['~/assets/main.css'],
+  css: [
+    // '~/assets/main.css',
+    '@oruga-ui/oruga-next/src/scss/oruga-full-vars.scss',
+    // '~/assets/sass/autoscheduler.scss'
+  ],
   experimental: {
     reactivityTransform: true,
     viteNode: false,
   },
+
+  meta: {
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.8.2/css/all.css',
+      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
+    ],
+  },
+
   modules: [
     // https://github.com/formkit/formkit#readme
     '@formkit/nuxt',
@@ -74,9 +89,20 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     // https://github.com/windicss/nuxt-windicss#readme
     // https://github.com/unocss/unocss#readme
+    'v-tooltip/nuxt',
     // https://github.com/moritzsternemann/vue-plausible#readme
     // 'vue-plausible',
   ],
+
+  privateRuntimeConfig: {
+    supabaseKey: process.env.SUPABASE_KEY,
+  },
+
+  publicRuntimeConfig: {
+    supabaseUrl: process.env.SUPABASE_URL,
+    supabasePublicKey: process.env.SUPABASE_PUBLIC_KEY,
+  },
+
   // https://supabase.nuxtjs.org/
   supabase: {
     // Options

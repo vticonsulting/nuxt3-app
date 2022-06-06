@@ -126,7 +126,7 @@ The <var>var element</var> example
 Code block wrapped in "pre" and "code" tags:
 
 ```javascript
-// Loop through Divs using Javascript.
+// Loop through Divs using JavaScript.
 var divs = document.querySelectorAll('div'), i;
 
 for (i = 0; i < divs.length; ++i) {
