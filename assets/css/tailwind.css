@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen text-gray-800;
+}
+#__nuxt {
+  @apply w-full flex flex-col items-center;
+}
+[data-v-tippy] {
+  padding: 0 0.25rem;
+  cursor: pointer;
+}
+.tippy-box[data-theme~="light"] {
+  border-radius: 10px !important;
+  box-shadow: 0 0 20px 4px rgb(168 183 219 / 15%), 0 4px 80px -8px rgb(144 157 179 / 25%),
+    0 4px 4px -2px rgb(251 251 251 / 15%) !important;
+}
+
+.rainbow-text {
+	@apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-600;
+}
+.rainbow-bg {
+	@apply bg-gradient-to-r from-primary to-pink-600;
+}
+
+.page-enter-active,
+.page-leave-active {
+	transition: all 0.3s ease-in-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+	opacity: 0;
+	transform: scale(0.99);
+}

@@ -10,4 +10,15 @@
   "[markdown]": {
     "editor.formatOnSave": true
   },
+  "[postcss]": {
+    "editor.formatOnSave": false,
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "tailwindCSS.hovers": false
 }
