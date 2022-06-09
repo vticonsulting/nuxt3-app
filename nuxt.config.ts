@@ -25,8 +25,8 @@ export default defineNuxtConfig({
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: '',
-    preference: 'light', // default theme
-    dataValue: 'theme', // activate data-theme in <html> tag
+    // preference: 'light', // default theme
+    // dataValue: 'theme', // activate data-theme in <html> tag
   },
   // https://content.nuxtjs.org
   content: {
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
   },
   css: [
     // '~/assets/main.css',
-    '@oruga-ui/oruga-next/src/scss/oruga-full-vars.scss',
+    // '@oruga-ui/oruga-next/src/scss/oruga-full-vars.scss',
     // '~/assets/sass/autoscheduler.scss'
   ],
   experimental: {
@@ -68,7 +68,7 @@ export default defineNuxtConfig({
 
   modules: [
     // https://github.com/formkit/formkit#readme
-    '@formkit/nuxt',
+    // '@formkit/nuxt',
     // https://github.com/nuxt/content#readme
     '@nuxt/content',
     // https://github.com/nuxt-community/algolia-module#readme

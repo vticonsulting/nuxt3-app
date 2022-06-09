@@ -22,8 +22,8 @@ module.exports = {
     'plugins/**/*.{js,ts}',
     'App.{js,ts,vue}',
     'app.{js,ts,vue}',
-    'formkit.config.{js,ts}',
-    'theme.{js,ts}',
+    // 'formkit.config.{js,ts}',
+    // 'theme.{js,ts}',
   ],
   theme: {
     extend: {
