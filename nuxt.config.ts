@@ -92,6 +92,7 @@ export default defineNuxtConfig({
     'v-tooltip/nuxt',
     // https://github.com/moritzsternemann/vue-plausible#readme
     // 'vue-plausible',
+    'unplugin-icons/nuxt',
   ],
 
   privateRuntimeConfig: {
