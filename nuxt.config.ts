@@ -2,6 +2,7 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  ssr: false,
   // https://algolia.nuxtjs.org/
   algolia: {
     // apiKey: '0fd1c4eba2f831788333e77c9d855f1d',
@@ -85,6 +86,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     // https://github.com/vueuse/vueuse#readme
     '@vueuse/nuxt',
+    // https://github.com/Baroshem/nuxt-shopify-tailwind
+    // https://github.com/diizzayy/nuxt-graphql-client#readme
+    // 'nuxt-graphql-client',
     // https://github.com/cipami/nuxt-lodash#readme
     'nuxt-lodash',
     // https://github.com/windicss/nuxt-windicss#readme
@@ -102,6 +106,25 @@ export default defineNuxtConfig({
   publicRuntimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
     supabasePublicKey: process.env.SUPABASE_PUBLIC_KEY,
+  },
+
+  runtimeConfig: {
+    public: {
+      // GQL_HOST: 'https://api.spacex.land/graphql'
+      'graphql-client': {
+        clients: {
+          default: {
+            host: process.env.SHOPIFY_DOMAIN,
+            token: {
+              name: 'X-Shopify-Storefront-Access-Token',
+              value: process.env.SHOPIFY_STOREFRONT_TOKEN,
+              type: null,
+            },
+            retainToken: true,
+          },
+        },
+      },
+    },
   },
 
   // https://supabase.nuxtjs.org/
