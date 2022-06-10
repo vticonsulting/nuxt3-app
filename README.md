@@ -1,42 +1,82 @@
-# Content v2 Minimal Starter
+# Demos (codename: frontier)
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+> Digital Garden
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Usage examples
+  - [ ] Error log viewer
+  - [ ] Stored Procedures
+- Dev Notes (nuxt-content)
+- documentation (vitepress)
+- unit testing (vitepress)
+- mock (msw)
+- supabase open-source firebase alternative
+- plausible analytics
+- Component Testing (cypress)
+- End-to-End Testing (cypress, playwright)
+- Headless UI Components (headless-ui)
+- Any icon you want to use. instantly!
+- Composition API (Composables)
+- Options API - Easy to migrate
+- Vuex OR Pinia
+- Class Components (deprecated, but supported)
 
-```bash
-# yarn
-yarn install
+- https://github.com/viandwi24/nuxt3-awesome-starter#readme
+- https://github.com/Baroshem/nuxt-shopify-tailwind#readme
+- https://github.com/Atinux/content-wind#readme
+- https://content.nuxtjs.org/examples/essentials/hello-world
 
-# npm
-npm install
+---
 
-# pnpm
-pnpm install --shamefully-hoist
+## Querying for content
+
+```ts
+const { data } = await useAsyncData()
+const file = await queryContent('hello').findOne()
+
+const { data: equalQuery } = await useAsyncData('equal', () => {
+  return queryContent('/').where({ director: 'Hayao Miyazaki' }).find()
+})
+
+const { data: lowerThanQuery } = await useAsyncData('lower-than', () => {
+  return queryContent('/').where({
+    release_date: { $lt: 1997 }
+  }).find()
+})
+
+const { data: notEqualQuery } = await useAsyncData('not-equal', () => {
+  return queryContent('/').where({
+    director: { $ne: 'Hayao Miyazaki' }
+  }).find()
+})
+
+const { data: inQuery } = await useAsyncData('in', () => {
+  return queryContent('/').where({
+    director: { $in: ['Hayao Miyazaki', 'Yoshifumi Kondō'] }
+  }).find()
+})
+
+const { data: onlyTitle } = await useAsyncData('homepage', () => {
+  return queryContent('/').only(['title']).findOne()
+})
+
+const { data: withOutTitle } = await useAsyncData('homepage', () => {
+  return queryContent('/').without(['title']).findOne()
+})
 ```
 
-## Development Server
+---
 
-Start the development server on http://localhost:3000
+```ts
+const skip = ref(2)
+const limit = ref(2)
 
-```bash
-npm run dev
+const { data, refresh } = await useAsyncData('homepage', () => {
+  return queryContent('/').skip(skip.value).limit(limit.value).find()
+})
+
+watch([skip, limit], () => {
+  refresh()
+})
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
