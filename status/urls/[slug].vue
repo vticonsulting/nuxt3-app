@@ -19,7 +19,11 @@ useCustomHead(`${url.value.title} Status Page | StatusBase`)
   <div class="">
     <OverallStatus :report_data="log" />
 
+<<<<<<< HEAD:status/urls/[slug].vue
     <div class="mt-12 md:mt-20 font-semibold inline-flex flex-col md:flex-row md:items-end">
+=======
+    <div class="inline-flex flex-col mt-12 font-semibold md:mt-20 md:flex-row md:items-end">
+>>>>>>> 4c145fc0354b223868c7e94ab2d82184d76d1ec1:pages/status/urls/[slug].vue
       <h2 class="text-xl md:text-3xl">
         {{ url.title }}'s Uptime
       </h2>

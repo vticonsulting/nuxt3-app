@@ -1,13 +1,12 @@
 {
   "private": true,
-  "packageManager": "pnpm@7.1.8",
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev -o",
-    "start": "node .output/server/index.mjs",
     "generate": "nuxi generate",
-    "preview": "nuxi preview",
     "lint": "eslint .",
+    "preview": "nuxi preview",
+    "start": "node .output/server/index.mjs",
     "tailwind-config-viewer": "tailwind-config-viewer -o"
   },
   "devDependencies": {
@@ -34,8 +33,8 @@
     "@iconify/json": "2.1.59",
     "@iconify/vue": "^3.2.1",
     "@nuxt/content": "2.0.1",
+    "@nuxt/test-utils-edge": "3.0.0-rc.3-27581242.8831e4a",
     "@nuxt/test-utils": "3.0.0-rc.3",
-    "@nuxt/test-utils-edge": "3.0.0-rc.3-27571095.9379606",
     "@nuxtjs/algolia": "0.9.2",
     "@nuxtjs/color-mode": "^3.1.4",
     "@nuxtjs/partytown": "1.2.1",
@@ -49,23 +48,24 @@
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
     "@tanstack/vue-table": "^8.0.0-beta.8",
-    "@types/react": ">= 16.8.0 < 19.0.0",
+    "@types/react": "18.0.12",
     "@unocss/nuxt": "^0.38.2",
     "@vueuse/core": "^8.6.0",
     "@vueuse/nuxt": "^8.6.0",
     "axios": "^0.27.2",
     "canvas-confetti": "^1.5.1",
-    "cypress": "^10.0.3",
+    "cypress": "^10.1.0",
     "date-fns": "^2.28.0",
     "dayjs": "^1.11.3",
     "eslint": "^8.17.0",
-    "nuxt": "3.0.0-rc.3",
+    "mini-svg-data-uri": "^1.4.4",
     "nuxt-graphql-client": "^0.0.32",
     "nuxt-lodash": "2.2.0",
     "nuxt-windicss": "^2.4.2",
+    "nuxt": "3.0.0-rc.3",
     "pinia": "^2.0.14",
-    "react": ">= 16.8.0 < 19.0.0",
-    "react-dom": ">= 16.8.0 < 19.0.0",
+    "react-dom": "18.1.0",
+    "react": "18.1.0",
     "sass": "^1.52.3",
     "swiper": "^8.2.3",
     "typescript": "^4.7.3",
@@ -80,5 +80,6 @@
     "vue-tippy": "^6.0.0-alpha.58",
     "vuejs-smart-table": "^1.0.0-beta.6",
     "webpack": ">=5.73.0"
-  }
+  },
+  "packageManager": "pnpm@7.1.9"
 }

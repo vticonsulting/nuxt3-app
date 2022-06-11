@@ -73,7 +73,7 @@ export default defineNuxtConfig({
     // https://github.com/nuxt/content#readme
     '@nuxt/content',
     // https://github.com/nuxt-community/algolia-module#readme
-    '@nuxtjs/algolia',
+    // '@nuxtjs/algolia',
     // https://github.com/nuxt-community/color-mode-module#readme
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/partytown-module#readme
