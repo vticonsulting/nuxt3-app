@@ -1,0 +1,61 @@
+/* Dropdown */
+
+.is-div-active {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+/* Field */
+
+.field {
+  margin-top: 0.5rem;
+}
+
+.field-danger.form-text {
+  color: var(--bs-danger);
+}
+
+/* Checkbox */
+
+.form-check-label {
+  margin-left: 0.2rem;
+}
+
+/* Steps */
+
+.step-marker {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.step-divider {
+  background: #b5b5b5;
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 100%;
+  height: 5px;
+  top: 35%;
+}
+
+.steps-nav-item-active .step-marker {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.steps-nav-item-active .step-divider {
+  background: none;
+  background: var(--bs-primary);
+}
+
+.steps-nav-item-previous .step-marker {
+  background: var(--bs-primary);
+}
+
+.steps-nav-item-previous .step-divider {
+  background: none;
+  background: var(--bs-primary);
+}

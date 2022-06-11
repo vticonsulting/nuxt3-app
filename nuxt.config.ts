@@ -2,7 +2,6 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  ssr: false,
   // https://algolia.nuxtjs.org/
   algolia: {
     // apiKey: '0fd1c4eba2f831788333e77c9d855f1d',
@@ -69,7 +68,7 @@ export default defineNuxtConfig({
 
   modules: [
     // https://github.com/formkit/formkit#readme
-    // '@formkit/nuxt',
+    '@formkit/nuxt',
     // https://github.com/nuxt/content#readme
     '@nuxt/content',
     // https://github.com/nuxt-community/algolia-module#readme
@@ -131,10 +130,14 @@ export default defineNuxtConfig({
   supabase: {
     // Options
   },
+
+  ssr: false,
+
   // https://tailwindcss.nuxtjs.org/
   tailwindcss: {
     // Options
   },
+
   typescript: {
     shim: false,
   },
