@@ -1,6 +1,6 @@
-# Content v2 Minimal Starter
+# Nuxt 3 App
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+> Node.js 14.18+ / 16+ is now required.
 
 ## Setup
 
@@ -19,7 +19,7 @@ pnpm install --shamefully-hoist
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on <http://localhost:3000>
 
 ```bash
 npm run dev
@@ -39,4 +39,7 @@ Locally preview production build:
 npm run preview
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+## Documentation
+
+- [Content documentation](https://content-v2.nuxtjs.org/)
+- [Deployment documentation](https://v3.nuxtjs.org/docs/deployment)

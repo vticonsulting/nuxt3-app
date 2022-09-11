@@ -1,7 +1,49 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 const svgToDataUri = require('mini-svg-data-uri')
-const { colors: appColors } = require('./app.config')
+// const { colors: appColors } = require('./app.config')
+
+const appColors = {
+  sanJuan: {
+    DEFAULT: '#314B6F',
+    50: '#f5f6f8',
+    100: '#eaedf1',
+    200: '#ccd2db',
+    300: '#adb7c5',
+    400: '#6f819a',
+    500: '#314B6F',
+    600: '#2c4464',
+    700: '#253853',
+    800: '#1d2d43',
+    900: '#182536',
+  },
+  tango: {
+    DEFAULT: '#ee7d1e',
+    50: '#fef9f4',
+    100: '#fdf2e9',
+    200: '#fbdfc7',
+    300: '#f8cba5',
+    400: '#f3a462',
+    500: '#ee7d1e',
+    600: '#d6711b',
+    700: '#b35e17',
+    800: '#8f4b12',
+    900: '#753d0f',
+  },
+  toreaBay: {
+    DEFAULT: '#002894',
+    50: '#f2f4fa',
+    100: '#e6eaf4',
+    200: '#bfc9e4',
+    300: '#99a9d4',
+    400: '#4d69b4',
+    500: '#002894',
+    600: '#002485',
+    700: '#001e6f',
+    800: '#001859',
+    900: '#001449',
+  },
+}
 
 module.exports = {
   darkMode: 'class',
